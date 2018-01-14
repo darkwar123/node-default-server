@@ -1,0 +1,11 @@
+#modules
+node_modules/
+
+#config
+config/
+
+#idea
+.idea/
+
+#sh
+*.sh

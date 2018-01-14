@@ -1,0 +1,49 @@
+{
+    "name": "node-csgotune-api",
+    "version": "1.0.0",
+    "description": "API server for csgotune.com",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha -r should -R spec",
+        "start": "npm run prod",
+        "dev": "set NODE_ENV=development && set DEBUG=*,-connect:redis && node index.js",
+        "prod": "set NODE_ENV=production && node index.js"
+    },
+    "author": "Said Gadzhiev",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.18.2",
+        "boom": "^4.2.0",
+        "cachegoose": "^4.0.1",
+        "caminte": "^0.4.0",
+        "compression": "^1.7.1",
+        "connect-redis": "^3.3.3",
+        "consign": "^0.1.6",
+        "cookie-parser": "^1.4.3",
+        "debug": "^2.5.2",
+        "express": "^4.16.2",
+        "express-boom": "^2.0.0",
+        "express-session": "^1.15.6",
+        "fs": "0.0.1-security",
+        "helmet": "^3.9.0",
+        "ioredis": "^3.2.2",
+        "md5": "^2.2.1",
+        "module-alias": "^2.0.3",
+        "mongoose": "^4.13.9",
+        "node-socket.io-router": "git+https://github.com/darkwar123/node-socket.io-router.git",
+        "passport": "^0.4.0",
+        "passport-local": "^1.0.0",
+        "path": "^0.12.7",
+        "redis": "^2.6.2",
+        "serve-static": "^1.13.1",
+        "socket.io": "^2.0.4",
+        "socket.io-redis": "^5.2.0"
+    },
+    "_moduleAliases": {
+        "@root": ".",
+        "@config": "config",
+        "@api": "app/api",
+        "@core": "app/core",
+        "@database": "app/database"
+    }
+}
