@@ -15,7 +15,7 @@ mongoose.Promise = Promise;
 /* используем кэширование */
 cachegoose(mongoose, {
 	engine: 'redis',
-	client: new Redis(redisConfig)
+	client: new Redis(Object.assign(redisConfig, { keyPrefix: undefined }))
 });
 
 const connection = mongoose.createConnection(mongodbUri);
