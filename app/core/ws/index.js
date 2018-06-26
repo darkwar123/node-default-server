@@ -21,9 +21,9 @@ module.exports = function(app) {
 
 	io.adapter(redisAdapter(
 		{
+			key: redisAdapterPrefix,
 			pubClient: new Redis(redisConfig),
 			subClient: new Redis(redisConfig),
-			prefix: redisAdapterPrefix,
 		}
 	));
 
